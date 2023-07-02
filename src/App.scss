@@ -1,0 +1,93 @@
+@import url("https://fonts.cdnfonts.com/css/vic");
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "VIC", sans-serif;
+	color: white;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.header {
+	height: 80px;
+	background-color: black;
+	align-items: center;
+	display: flex;
+	padding: 1rem;
+	box-sizing: border-box;
+	justify-content: space-between;
+
+	> img {
+		height: 70%;
+	}
+	> div {
+		width: 100%;
+		margin-left: 2vmax;
+	}
+	> a {
+		cursor: pointer;
+	}
+	> svg {
+		width: 20px;
+		height: 20px;
+		fill: white;
+		cursor: pointer;
+	}
+}
+
+.ham {
+	display: none;
+}
+
+
+
+@media screen and (max-width: 390px) {
+	.ham {
+		display: flex;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+	}
+
+	.header {
+		a {
+			display: none;
+		}
+		.srch {
+			display: none;
+		}
+        >.ham{
+            width: 50px;
+            height: 50px;
+        }
+	}
+    .nav-links {
+		position: absolute;
+		background-color: rgb(227, 227, 227);
+		color: #f7f7f7;
+		width: 100%;
+		top: 10%;
+		left: -100%;
+		z-index: 9;
+		text-align: center;
+		transition: 0.3s ease-in-out;
+	}
+	.nav-links.active {
+		left: 0;
+		border-radius: 10px;
+		padding: 0px;
+	}
+    .nav-links{
+        >.lin{
+            flex-direction: column;
+            padding: 0px 20px;
+        }
+    }
+}
